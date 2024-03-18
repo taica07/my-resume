@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import NavLink from "./navLink";
-import { motion } from "framer-motion";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import NavLink from './navLink';
+import { motion } from 'framer-motion';
 
 const links = [
-  { url: "/", title: "Home" },
-  { url: "/about", title: "About" },
-  { url: "/portfolio", title: "Portfolio" },
-  { url: "/contact", title: "Contact" },
+  { url: '/', title: 'Home' },
+  { url: '/about', title: 'About' },
+  { url: '/portfolio', title: 'Portfolio' },
+  { url: '/contact', title: 'Contact' },
 ];
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
     },
     opened: {
       rotate: 45,
-      backgroundColor: "rgb(255,255,255)",
+      backgroundColor: 'rgb(255,255,255)',
     },
   };
   const centerVariants = {
@@ -40,18 +40,18 @@ const Navbar = () => {
     },
     opened: {
       rotate: -45,
-      backgroundColor: "rgb(255,255,255)",
+      backgroundColor: 'rgb(255,255,255)',
     },
   };
 
   const listVariants = {
     closed: {
-      x: "100vw",
+      x: '100vw',
     },
     opened: {
       x: 0,
       transition: {
-        when: "beforeChildren",
+        when: 'beforeChildren',
         staggerChildren: 0.2,
       },
     },
@@ -102,9 +102,7 @@ const Navbar = () => {
         <Link href="/">
           <Image src="/facebook.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="/">
-          <Image src="/pinterest.png" alt="" width={24} height={24} />
-        </Link>
+
         <Link href="/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
@@ -118,17 +116,17 @@ const Navbar = () => {
         >
           <motion.div
             variants={topVariants}
-            animate={open ? "opened" : "closed"}
+            animate={open ? 'opened' : 'closed'}
             className="w-10 h-1 bg-black rounded origin-left"
           ></motion.div>
           <motion.div
             variants={centerVariants}
-            animate={open ? "opened" : "closed"}
+            animate={open ? 'opened' : 'closed'}
             className="w-10 h-1 bg-black rounded"
           ></motion.div>
           <motion.div
             variants={bottomVariants}
-            animate={open ? "opened" : "closed"}
+            animate={open ? 'opened' : 'closed'}
             className="w-10 h-1 bg-black rounded origin-left"
           ></motion.div>
         </button>
