@@ -1,8 +1,8 @@
-"use client";
-import Brain from "@/components/brain";
-import { motion, useInView, useScroll } from "framer-motion";
-import Image from "next/image";
-import { useRef } from "react";
+'use client';
+import Brain from '@/components/brain';
+import { motion, useInView, useScroll } from 'framer-motion';
+import Image from 'next/image';
+import { useRef } from 'react';
 
 const AboutPage = () => {
   const containerRef = useRef();
@@ -11,16 +11,16 @@ const AboutPage = () => {
 
   const skillRef = useRef();
   // const isSkillRefInView = useInView(skillRef, {once:true});
-  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+  const isSkillRefInView = useInView(skillRef, { margin: '-100px' });
 
   const experienceRef = useRef();
-  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+  const isExperienceRefInView = useInView(experienceRef, { margin: '-100px' });
 
   return (
     <motion.div
       className="h-full"
-      initial={{ y: "-200vh" }}
-      animate={{ y: "0%" }}
+      initial={{ y: '-200vh' }}
+      animate={{ y: '0%' }}
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
@@ -31,7 +31,7 @@ const AboutPage = () => {
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY IMAGE */}
             <Image
-              src="https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/profile.jpg"
               alt=""
               width={112}
               height={112}
@@ -51,7 +51,8 @@ const AboutPage = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
-            <div className="self-end">
+
+            {/* <div className="self-end">
               <svg
                 width="185"
                 height="77"
@@ -65,12 +66,13 @@ const AboutPage = () => {
                   strokeWidth="2"
                 />
               </svg>
-            </div>
+            </div> */}
+
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
-              animate={{ opacity: 1, y: "10px" }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+              animate={{ opacity: 1, y: '10px' }}
+              transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +96,7 @@ const AboutPage = () => {
           <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
             {/* SKILL TITLE */}
             <motion.h1
-              initial={{ x: "-300px" }}
+              initial={{ x: '-300px' }}
               animate={isSkillRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl"
@@ -103,91 +105,73 @@ const AboutPage = () => {
             </motion.h1>
             {/* SKILL LIST */}
             <motion.div
-              initial={{ x: "-300px" }}
+              initial={{ x: '-300px' }}
               animate={isSkillRefInView ? { x: 0 } : {}}
               className="flex gap-4 flex-wrap"
             >
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JavaScript
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 TypeScript
-              </div>
+              </div> */}
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 React.js
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Next.js
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 SCSS
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              </div> */}
+
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Tailwind CSS
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              </div> */}
+
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 MongoDB
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                PostgreSQL
-              </div>
+              </div> */}
+
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Node.js
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Nest.js
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Express.js
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Spring Boot
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                GraphQL
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Apollo
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              </div> */}
+
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Redux
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Framer Motion
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Three.js
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                WebGL
-              </div>
+              </div> */}
+
+              {/* 
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Webpack
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              </div> */}
+
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Vite
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Docker
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                AWS
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              </div> */}
+
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Firebase
-              </div>
+              </div> */}
+
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Git
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Figma
-              </div>
+              </div> */}
             </motion.div>
             {/* SKILL SCROLL SVG */}
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
-              animate={{ opacity: 1, y: "10px" }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+              animate={{ opacity: 1, y: '10px' }}
+              transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -214,8 +198,8 @@ const AboutPage = () => {
           >
             {/* EXPERIENCE TITLE */}
             <motion.h1
-              initial={{ x: "-300px" }}
-              animate={isExperienceRefInView ? { x: "0" } : {}}
+              initial={{ x: '-300px' }}
+              animate={isExperienceRefInView ? { x: '0' } : {}}
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl"
             >
@@ -223,8 +207,8 @@ const AboutPage = () => {
             </motion.h1>
             {/* EXPERIENCE LIST */}
             <motion.div
-              initial={{ x: "-300px" }}
-              animate={isExperienceRefInView ? { x: "0" } : {}}
+              initial={{ x: '-300px' }}
+              animate={isExperienceRefInView ? { x: '0' } : {}}
               className=""
             >
               {/* EXPERIENCE LIST ITEM */}
@@ -238,7 +222,7 @@ const AboutPage = () => {
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
                     I led web development, offering expertise in JavaScript
-                    frameworks.{" "}
+                    frameworks.{' '}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
@@ -281,11 +265,11 @@ const AboutPage = () => {
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
                     I spearheaded React-based application development,
-                    leveraging advanced skills.{" "}
+                    leveraging advanced skills.{' '}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2019 - 2024{" "}
+                    2019 - 2024{' '}
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
@@ -299,16 +283,16 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Freelancer{" "}
+                    Freelancer{' '}
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
                     I provided web solutions, applying a range of technologies
-                    to address client requirements.{" "}
+                    to address client requirements.{' '}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2010 - 2019{" "}
+                    2010 - 2019{' '}
                   </div>
                 </div>
                 {/* CENTER */}
