@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 import todoImg from '../../images/todo-list.jpg';
+import blogImg from '../../images/blog.jpg';
 
 const items = [
   {
@@ -17,10 +18,10 @@ const items = [
   {
     id: 2,
     color: 'from-blue-300 to-violet-300',
-    title: 'Next.js Medium Blog',
+    title: 'Next.js Blog',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
-    img: 'https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
-    link: 'https://lama.dev',
+    img: blogImg,
+    link: 'https://nextjs-blog-taica07.vercel.app/',
   },
   {
     id: 3,
