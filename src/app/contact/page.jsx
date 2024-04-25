@@ -70,12 +70,14 @@ const ContactPage = () => {
         >
           <span>Dear Mihai,</span>
           <textarea
+            autoFocus
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none p-2 text-xl"
             name="user_message"
           />
           <span>My mail address is:</span>
           <input
+            required
             name="user_email"
             type="text"
             className="bg-transparent border-b-2 border-b-black outline-none"
