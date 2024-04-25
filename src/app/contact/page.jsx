@@ -66,13 +66,14 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          // className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-6 lg:p-24"
         >
           <span>Dear Mihai,</span>
           <textarea
             autoFocus
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none p-2 text-xl"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
             name="user_message"
           />
           <span>My mail address is:</span>
