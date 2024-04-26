@@ -15,14 +15,14 @@ const items = [
     img: todoImg,
     link: 'https://todo-list-crud-taica07.vercel.app/',
   },
-  {
-    id: 2,
-    color: 'from-blue-300 to-violet-300',
-    title: 'Next.js Blog',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
-    img: blogImg,
-    link: 'https://nextjs-blog-taica07.vercel.app/',
-  },
+  // {
+  //   id: 2,
+  //   color: 'from-blue-300 to-violet-300',
+  //   title: 'Next.js Blog',
+  //   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
+  //   img: blogImg,
+  //   link: 'https://nextjs-blog-taica07.vercel.app/',
+  // },
   // {
   //   id: 3,
   //   color: 'from-violet-300 to-purple-300',

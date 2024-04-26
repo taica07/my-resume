@@ -82,7 +82,7 @@ const ContactPage = () => {
             required
             onFocus={handleFocus} // Call handleFocus when textarea is focused}
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none p-5"
             name="user_message"
           />
           <span>My mail address is:</span>
@@ -90,7 +90,7 @@ const ContactPage = () => {
             required
             name="user_email"
             type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none p-4"
+            className="bg-transparent border-b-2 border-b-black outline-none p-5"
           />
           <span>Regards</span>
 
