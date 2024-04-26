@@ -71,39 +71,35 @@ const ContactPage = () => {
           </div>
         )}
         {/* FORM CONTAINER */}
+
         <form
           onSubmit={sendEmail}
           ref={form}
-          // className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
           className="h-3/4 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-6 lg:p-24"
         >
-          <span>Dear Mihai,</span>
+          <label className="text-lg font-semibold">Dear Mihai,</label>
           <textarea
             required
-            onFocus={handleFocus} // Call handleFocus when textarea is focused}
+            onFocus={handleFocus}
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none p-5"
+            className="bg-transparent border-b-2 border-b-black outline-none  rounded-lg"
             name="user_message"
           />
-          <span>My mail address is:</span>
+          <label className="text-lg font-semibold">My mail address is:</label>
           <input
             required
             name="user_email"
-            type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none p-5"
+            type="email" // Use type="email" for better validation
+            className="bg-transparent border-b-2 border-b-black outline-none p-5 rounded-lg"
           />
-          <span>Regards</span>
+          <label className="text-lg font-semibold">Regards</label>
 
           <button
             style={{
-              backgroundColor: success
-                ? 'green'
-                : error
-                ? 'red'
-                : 'bg-purple-500',
+              backgroundColor: success ? 'green' : error ? 'red' : 'purple',
             }}
             onClick={() => setColor('green')}
-            className="bg-purple-500 rounded font-semibold text-white p-4"
+            className="bg-purple-500 rounded-lg font-semibold text-white py-3"
           >
             Send
           </button>
@@ -119,6 +115,7 @@ const ContactPage = () => {
             </span>
           )}
         </form>
+        {/* Form Container end */}
       </div>
     </motion.div>
   );
