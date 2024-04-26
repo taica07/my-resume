@@ -7,6 +7,7 @@ const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [color, setColor] = useState('purple');
+  const [showContent, setShowContent] = useState(true);
   const text = 'Say Hello';
 
   const form = useRef();
@@ -27,11 +28,16 @@ const ContactPage = () => {
         () => {
           setSuccess(true);
           form.current.reset();
+          setShowContent(true); // Show content after sending email
         },
         () => {
           setError(true);
         }
       );
+  };
+
+  const handleFocus = () => {
+    setShowContent(false); // Hide content when textarea is focused
   };
 
   return (
@@ -43,25 +49,27 @@ const ContactPage = () => {
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* TEXT CONTAINER */}
-        <div className="h-1/3 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
-          <div>
-            {text.split('').map((letter, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 0 }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  delay: index * 0.1,
-                }}
-              >
-                {letter}
-              </motion.span>
-            ))}
-            😊
+        {showContent && ( // Show content if showContent is true
+          <div className="h-1/3 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+            <div>
+              {text.split('').map((letter, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 0 }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    delay: index * 0.1,
+                  }}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+              😊
+            </div>
           </div>
-        </div>
+        )}
         {/* FORM CONTAINER */}
         <form
           onSubmit={sendEmail}
@@ -72,7 +80,7 @@ const ContactPage = () => {
           <span>Dear Mihai,</span>
           <textarea
             required
-            autoFocus
+            onFocus={handleFocus} // Call handleFocus when textarea is focused}
             rows={6}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none"
             name="user_message"
@@ -82,7 +90,7 @@ const ContactPage = () => {
             required
             name="user_email"
             type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none"
+            className="bg-transparent border-b-2 border-b-black outline-none p-4"
           />
           <span>Regards</span>
 
