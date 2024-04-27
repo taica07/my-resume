@@ -87,6 +87,7 @@ const ContactPage = () => {
           />
           <label className="text-lg font-semibold">My mail address is:</label>
           <input
+            autoFocus
             required
             name="user_email"
             type="email" // Use type="email" for better validation
