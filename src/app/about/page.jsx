@@ -41,15 +41,19 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              harum quibusdam cupiditate nobis accusamus sed aut aperiam,
-              reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
-              suscipit! Vel doloremque numquam quam nihil.
+              An enthusiastic and detail-oriented Junior Frontend Developer with
+              proficient knowledge in HTML and CSS, as well as third-party
+              libraries such as jQuery, Angular, and React. Seeking to utilize
+              my technical skills and expertise to provide value to the employer
+              and contribute to successful projects both today and in the
+              future. Aiming to take on new challenges and utilize my coding and
+              debugging skills for developing new features and enhance the
+              overall user experience..
             </p>
             {/* BIOGRAPHY QUOTE */}
-            <span className="italic">
+            {/* <span className="italic">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
+            </span> */}
             {/* BIOGRAPHY SIGN SVG*/}
 
             {/* <div className="self-end">
@@ -110,11 +114,15 @@ const AboutPage = () => {
               className="flex gap-4 flex-wrap"
             >
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                HTML
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                CSS
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JavaScript
               </div>
-              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                TypeScript
-              </div> */}
+
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 React.js
               </div>
@@ -212,26 +220,23 @@ const AboutPage = () => {
               className=""
             >
               {/* EXPERIENCE LIST ITEM */}
-              <div className="flex justify-between h-48">
+              <div className="flex justify-between h-78">
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior JavaScript Engineer
+                    Junior Front-End Developer
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I led web development, offering expertise in JavaScript
-                    frameworks.{' '}
+                    Created multiple responsive websites for mobile and desktop
+                    devices using HTML , CSS and JAVASCRIPT, as well as
+                    third-party libraries such as and React and Next.Js
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
                     2024 - Present
                   </div>
-                  {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Apple
-                  </div>
                 </div>
                 {/* CENTER */}
                 <div className="w-1/6 flex justify-center">
@@ -260,21 +265,18 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior React Developer
+                    Junior Javascript Developer
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I spearheaded React-based application development,
-                    leveraging advanced skills.{' '}
+                    I learned Javascript application development and start
+                    studying React.Js framework
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2019 - 2024{' '}
+                    2022 - 2024{' '}
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Microsoft
-                  </div>
                 </div>
               </div>
               {/* EXPERIENCE LIST ITEM */}
@@ -283,16 +285,15 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Freelancer{' '}
+                    HTML CSS{' '}
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I provided web solutions, applying a range of technologies
-                    to address client requirements.{' '}
+                    I learned how to structure and styling in web design
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2010 - 2019{' '}
+                    2020 - 2022
                   </div>
                 </div>
                 {/* CENTER */}

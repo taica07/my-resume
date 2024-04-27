@@ -11,7 +11,7 @@ const items = [
     id: 1,
     color: 'from-red-300 to-blue-300',
     title: 'React Todo List',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
+    desc: ' A practical and functional todo list app that showcases the incredible capabilities of the most popular JavaScript library.',
     img: todoImg,
     link: 'https://todo-list-crud-taica07.vercel.app/',
   },
